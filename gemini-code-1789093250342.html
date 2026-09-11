@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Manuel Ramirez Ramos | Ingeniero & Especialista en Big Data</title>
+    <!-- Google Fonts & FontAwesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: #141414;
+            --card-border: #262626;
+            --text-main: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f1c40f;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Nuevo Logo Tipográfico Cabecera */
+        .text-logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--bg-color);
+            background-color: var(--accent-gold);
+            padding: 0 8px;
+            border-radius: 6px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            line-height: 1.2;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            gap: 50px;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-content h3 {
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--accent-gold);
+            color: #000;
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+        }
+
+        .hero-visual {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-avatar-box {
+            width: 280px;
+            height: 280px;
+            border: 2px dashed var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Nuevo Logo Grande Círculo Central */
+        .hero-avatar-box .large-hero-logo {
+            font-size: 6.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 8%;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-title h2 span {
+            color: var(--accent-gold);
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 40px;
+            border-radius: 16px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.1);
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .card ul li::before {
+            content: "•";
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 25px;
+            height: 100%;
+            width: 2px;
+            background-color: var(--card-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 80px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 15px;
+            top: 8px;
+            width: 22px;
+            height: 22px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--accent-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.1);
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .timeline-content span.role-title {
+            color: var(--accent-gold);
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content span.company-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 60px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .contact-box i {
+            font-size: 4rem;
+            color: var(--accent-gold);
+            margin-bottom: 30px;
+        }
+
+        .contact-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-btns {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Minigame Section (Tic Tac Toe) */
+        .game-section {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--card-border);
+        }
+
+        .game-wrapper {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            border: 1px solid var(--card-border);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px -15px rgba(0,0,0,0.5);
+        }
+
+        .game-status {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .cell {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            height: 100px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .cell:hover {
+            border-color: var(--accent-gold);
+            background-color: #1f1f1f;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 8%;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: var(--bg-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 60px 5%;
+                min-height: auto;
+            }
+            .hero-content {
+                margin-top: 30px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .btn-container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            section {
+                padding: 70px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-container">
+            <!-- Nuevo Logo Tipográfico (Sin imágenes) -->
+            <div class="text-logo">JR</div>
+            <div class="logo-text">
+                <span class="logo-name">Jose Manuel Ramirez</span>
+                <span class="logo-tagline">INGENIERÍA & BIG DATA</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#minijuego">Minijuego</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Inicio / Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h3>Hola, mi nombre es</h3>
+            <h1>Jose Manuel<br>Ramirez Ramos</h1>
+            <p>Ingeniero Electrónico | Especialista en Big Data | Técnico Eléctrico y Electrónico</p>
+            <div class="btn-container">
+                <a href="https://wa.me/573158272742?text=Hola%20Jose%20Manuel,%20vi%20tu%20portafolio%20web%20y%20me%20gustaría%20contactarte." target="_blank" class="btn">
+                    <i class="fa-brands fa-whatsapp"></i> Contáctame
+                </a>
+                <a href="#experiencia" class="btn btn-outline">Ver Experiencia</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-avatar-box">
+                <!-- Nuevo Logo Grande (Reemplaza los 3 puntos) -->
+                <div class="large-hero-logo">JR</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi">
+        <div class="section-title">
+            <h2>Sobre <span>Mí</span></h2>
+            <p>Conoce mis áreas de especialización técnica y profesional</p>
+        </div>
+        <div class="about-grid">
+            <div class="card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Técnico Eléctrico y Electrónico</h3>
+                <ul>
+                    <li>Aplicación de normas NTC 2050</li>
+                    <li>Electricidad industrial y mantenimiento de motores</li>
+                    <li>Instalaciones eléctricas domiciliarias y sistemas de puesta a tierra</li>
+                    <li>Neumática y control por PLC</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Ingeniería Electrónica</h3>
+                <ul>
+                    <li>Control digital y procesamiento de señales</li>
+                    <li>Simulación y desarrollo en MATLAB</li>
+                    <li>Programación avanzada en Python</li>
+                    <li>Microcontroladores y robótica aplicada</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Especialista en Big Data</h3>
+                <ul>
+                    <li>Procesamiento y análisis de grandes volúmenes de datos</li>
+                    <li>Optimización de infraestructura analítica</li>
+                    <li>Toma de decisiones basada en datos masivos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia y Proyectos -->
+    <section id="experiencia">
+        <div class="section-title">
+            <h2>Experiencia y <span>Proyectos</span></h2>
+            <p>Trayectoria profesional y desempeño en el sector</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Ingeniería Aplicada S.A.S.</h3>
+                    <span class="role-title">Practicante en Proyectos de Ingeniería</span>
+                    <span class="company-date">Enfoque en Automatización, Proyectos Eléctricos e Inteligencia Artificial</span>
+                    <p>Participación activa en el diseño e implementación de proyectos de automatización industrial, montajes eléctricos y desarrollo/entrenamiento de modelos de Inteligencia Artificial.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Empresa Distribuidora de Colombina</h3>
+                    <span class="role-title">Auxiliar de Bodega</span>
+                    <span class="company-date">Logística y Operaciones</span>
+                    <p>Gestión eficiente de inventarios, almacenamiento, logística y control de mercancía en entornos de alta exigencia operativa y distribución masiva.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Soporte Técnico Independiente</h3>
+                    <span class="role-title">Auxiliar en Trabajos Eléctricos</span>
+                    <span class="company-date">Instalaciones y Mantenimiento</span>
+                    <p>Ejecución de labores de apoyo en montajes, mantenimiento preventivo y correctivo de sistemas eléctricos cumpliendo estrictas normativas de seguridad técnica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Ponte en <span>Contacto</span></h2>
+            <p>Hablemos sobre nuevas oportunidades y proyectos</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-box">
+                <i class="fa-solid fa-paper-plane"></i>
+                <h3>¿Listo para colaborar?</h3>
+                <p>Puedes escribirme directamente a través de WhatsApp o enviarme un correo electrónico. ¡Estaré encantado de saludarte y conversar!</p>
+                <div class="contact-btns">
+                    <a href="https://wa.me/573158272742?text=Hola%20Jose%20Manuel,%20estoy%20interesado%20en%20tu%20perfil%20profesional." target="_blank" class="btn">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:ramirezramosjosemanuel11@gmail.com" class="btn btn-outline">
+                        <i class="fa-solid fa-envelope"></i> Correo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minijuego (Al final, Tic Tac Toe) -->
+    <section id="minijuego" class="game-section">
+        <div class="section-title">
+            <h2>Zona de <span>Entretenimiento</span></h2>
+            <p>Un breve descanso con un clásico Tres en Raya</p>
+        </div>
+        <div class="game-wrapper">
+            <div class="game-status" id="gameStatus">Turno del Jugador: X</div>
+            <div class="board" id="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <button class="btn btn-outline" onclick="resetGame()" style="width: 100%;">Reiniciar Juego</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jose Manuel Ramirez Ramos. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script del Minijuego -->
+    <script>
+        let board = ['', '', '', '', '', '', '', '', ''];
+        let currentPlayer = 'X';
+        let isGameActive = true;
+        const statusDisplay = document.getElementById('gameStatus');
+
+        const winningConditions = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ];
+
+        function makeMove(index) {
+            if (board[index] !== '' || !isGameActive) return;
+
+            board[index] = currentPlayer;
+            document.getElementsByClassName('cell')[index].innerText = currentPlayer;
+
+            checkResult();
+        }
+
+        function checkResult() {
+            let roundWon = false;
+            for (let i = 0; i < winningConditions.length; i++) {
+                let [a, b, c] = winningConditions[i];
+                if (board[a] === '' || board[b] === '' || board[c] === '') continue;
+                if (board[a] === board[b] && board[b] === board[c]) {
+                    roundWon = true;
+                    break;
+                }
+            }
+
+            if (roundWon) {
+                statusDisplay.innerText = `¡Jugador ${currentPlayer} ha ganado! 🎉`;
+                isGameActive = false;
+                return;
+            }
+
+            if (!board.includes('')) {
+                statusDisplay.innerText = `¡Empate! 🤝`;
+                isGameActive = false;
+                return;
+            }
+
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            statusDisplay.innerText = `Turno del Jugador: ${currentPlayer}`;
+        }
+
+        function resetGame() {
+            board = ['', '', '', '', '', '', '', '', ''];
+            isGameActive = true;
+            currentPlayer = 'X';
+            statusDisplay.innerText = `Turno del Jugador: X`;
+            
+            const cells = document.getElementsByClassName('cell');
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].innerText = '';
+            }
+        }
+    </script>
+</body>
+</html>
